@@ -4,7 +4,7 @@ var exphbs = require('express-handlebars');
    var app = express();
 
    
-   app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+   app.engine('handlebars', exphbs({defaultLayout:'main'}));
    app.set('view engine','handlebars');
 var fs = require('fs');
  var Products = require("./products");
@@ -16,12 +16,16 @@ var productList = products.readProductsFromFile('Nelisa Sales History.csv');
 var productGroup = products.groupByItemsSold(productList);
 
 var mostPop = products.mostPopularPrd(productGroup);
-
-console.log(mostPop);
-
 var leastPop = products.leastPopularPrd(productGroup);
 
-console.log(leastPop);
+//console.log(mostPop);
+
+var leastPopCat = products.leastPopularCat(productGroup);
+var mostPopCat = products.mostPopularCat(productGroup);
+
+app.use(express.static('Public'));
+
+//console.log(leastPop);
 
    app.get('/', function (req, res) {
     res.render('home');
@@ -35,10 +39,28 @@ console.log(leastPop);
     //app.get('/pretty', function (req, res) {
     // res.send('bye pretty!');
    });
-   app.get('/products', function (req, res) {
-    res.render('products', {
-      mostPopular: mostPop,
+   app.get('/most_popular_product', function (req, res) {
+    res.render('most_popular_product', {
+      mostPopular: mostPop
+     
+    } );
+   });
+   app.get('/least_popular_product', function (req, res) {
+    res.render('least_popular_product', {
       leastPopular: leastPop
+     
+    } );
+   });
+   app.get('/most_popular_catergory', function (req, res) {
+    res.render('most_popular_catergory', {
+      mostPopularCat: mostPopCat
+     
+    } );
+   });
+   app.get('/least_popular_catergory', function (req, res) {
+    res.render('least_popular_catergory', {
+      leastPopularCat: leastPopCat
+     
     } );
    });
 
