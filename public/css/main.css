@@ -1,0 +1,53 @@
+
+
+.btn-success{
+
+	
+	margin-bottom: 1em;
+	width : 100%;
+
+}
+.connect{
+	    background-image:url('../images/bg-social-sites.jpg');  
+	    background-repeat:no-repeat;
+		height:49px;
+		width:186px;
+		margin: 0 auto;
+	  }
+
+.connect a{
+		  display:block;
+		  float:left;
+		  text-decoration:none;
+		  margin: 10px 10px 0px 20px;
+		}
+		
+	 .connect a.facebook{
+		background-image:url('./images/fb.png');  
+	    background-repeat:no-repeat;
+		background-position: 0 0; 
+		width: 25px; 
+		height: 26px; 
+		margin-left:5px;
+	}
+	.connect a.twitter{
+	    background-image:url('./images/twi.png');  
+	    background-repeat:no-repeat;
+		background-position: 0 -76px; 
+		width: 37px; 
+		height: 26px;
+	}
+	.connect a.mail{
+	    background-image:url('./images/gmail.png');  
+	    background-repeat:no-repeat;
+		background-position: 0 -152px; 
+		width: 32px; 
+		height: 26px;
+	}
+
+	 .footer{
+	    background-image:url('../images/bg-page-bottom-curve.jpg');  
+		 background-repeat:no-repeat;
+		 background-position:bottom center;
+		 padding: 0 0 5px 0;
+	}

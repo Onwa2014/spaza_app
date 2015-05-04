@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
     "express": "~4.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TrevorOctober/spaza_app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TrevorOctober/spaza_app/issues"
   }
 }
